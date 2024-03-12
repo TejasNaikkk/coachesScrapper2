@@ -1,7 +1,9 @@
 import config
 from souper import souper
+from getDetails import getInfo
 
 url = config.url
+testURL = config.testURL
 
 
 soup = souper(url)
@@ -15,4 +17,5 @@ for h3 in h3s:
     href = a['href']
     users.append(href)
 
-print(len(users))
+test = getInfo(testURL)
+print(test)
