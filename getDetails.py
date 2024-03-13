@@ -115,7 +115,7 @@ def getMore(more):
         
     # CoachingFormat
     try:
-        coachingFormatParent = more.find('div', class_= 'elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-92b9ed8')
+        coachingFormatParent = more.find('div', class_= 'elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-bd94025')
         spans = coachingFormatParent.find_all('span', class_=False)
         for span in spans:
             frmt = span.text
