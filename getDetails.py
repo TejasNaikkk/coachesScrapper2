@@ -96,7 +96,9 @@ def getMore(more):
         specialitiesParent = more.find('div', class_= 'elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-3696016')
         spans = specialitiesParent.find_all('span', class_=False)
         for span in spans:
-            specialities.append(span.text)
+            specs = span.text
+            specs = specs.strip()
+            specialities.append(specs)
     except Exception:
         print(Exception)
     
@@ -105,7 +107,9 @@ def getMore(more):
         educationParent = more.find('div', class_= 'elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-92b9ed8')
         spans = educationParent.find_all('span', class_=False)
         for span in spans:
-            education.append(span.text)
+            eds = span.text
+            eds = eds.strip()
+            education.append(eds)
     except Exception:
         print(Exception)
         
@@ -114,7 +118,9 @@ def getMore(more):
         coachingFormatParent = more.find('div', class_= 'elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-92b9ed8')
         spans = coachingFormatParent.find_all('span', class_=False)
         for span in spans:
-            coachingFormat.append(span.text)
+            frmt = span.text
+            frmt = frmt.strip()
+            coachingFormat.append(frmt)
     except Exception:
         print(Exception)
 
